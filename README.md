@@ -25,6 +25,9 @@ In both cases, the output should start with a real user scenario, then explain t
 ## Included resources
 
 - [SKILL.md](./SKILL.md): main skill rules and invocation guidance
+- [CLAUDE.md](./CLAUDE.md): Claude-friendly instruction file
+- [SYSTEM_PROMPT.md](./SYSTEM_PROMPT.md): platform-agnostic base prompt
+- [PORTABILITY.md](./PORTABILITY.md): notes for using the repo across agent platforms
 - [references/workflow.md](./references/workflow.md): repeatable research workflow
 - [references/writing-style.md](./references/writing-style.md): tone and plain-language rules
 - [references/glossary.md](./references/glossary.md): jargon-to-human translation patterns
@@ -33,6 +36,8 @@ In both cases, the output should start with a real user scenario, then explain t
 - [assets/visual-explainer-template/](./assets/visual-explainer-template): light-mode HTML/CSS/JS starter for an explainer page
 - [scripts/repo-triage.ps1](./scripts/repo-triage.ps1): create a quick shortlist file for candidate repos and public sources
 - [scripts/new-teardown-brief.ps1](./scripts/new-teardown-brief.ps1): generate a teardown outline scaffold
+- [scripts/repo-triage.py](./scripts/repo-triage.py): cross-platform Python version of the triage scaffold
+- [scripts/new-teardown-brief.py](./scripts/new-teardown-brief.py): cross-platform Python version of the teardown scaffold
 
 ## Install
 
@@ -41,6 +46,16 @@ Copy this folder into your Codex skills directory:
 ```powershell
 Copy-Item -Recurse -Force .\product-teardown-explainer C:\Users\Lenovo\.codex\skills\product-teardown-explainer
 ```
+
+## Cross-platform use
+
+If your agent platform does not support Codex-style skills directly:
+
+- use [CLAUDE.md](./CLAUDE.md) as a Claude project instruction
+- use [SYSTEM_PROMPT.md](./SYSTEM_PROMPT.md) as a generic agent prompt
+- load `references/` as supporting context
+- start visual explainers from `assets/visual-explainer-template/`
+- prefer the Python scripts in `scripts/` for cross-platform scaffolding
 
 ## Example prompts
 
