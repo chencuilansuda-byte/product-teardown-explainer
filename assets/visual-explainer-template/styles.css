@@ -1,0 +1,258 @@
+:root {
+  --bg: #f6f1e8;
+  --paper: rgba(255, 252, 246, 0.86);
+  --paper-strong: #fffaf2;
+  --ink: #1c1a18;
+  --muted: #635d56;
+  --line: rgba(28, 26, 24, 0.12);
+  --accent: #d96b2b;
+  --accent-soft: #f8d5bf;
+  --accent-2: #1f6c5f;
+  --shadow: 0 18px 60px rgba(76, 56, 35, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(217, 107, 43, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(31, 108, 95, 0.14), transparent 26%),
+    linear-gradient(180deg, #fbf6ee 0%, var(--bg) 100%);
+}
+
+.page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.hero,
+.section {
+  margin-bottom: 28px;
+}
+
+.hero {
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: var(--paper);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow,
+.label,
+.speaker {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  line-height: 0.94;
+  max-width: 10ch;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.lede,
+.panel p,
+.layer p,
+.tool-card p,
+.message p,
+li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.hero-card,
+.panel,
+.layer,
+.message,
+.tool-card {
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 24px;
+}
+
+.chat-pill {
+  align-self: end;
+  padding: 18px;
+  border-radius: 22px 22px 6px 22px;
+  background: linear-gradient(135deg, var(--accent), #f0b38a);
+  color: white;
+  font-weight: 600;
+}
+
+.section-head {
+  margin-bottom: 14px;
+}
+
+.panel {
+  padding: 22px;
+  border-radius: 24px;
+}
+
+.layers {
+  display: grid;
+  gap: 14px;
+}
+
+.layer {
+  padding: 20px 22px;
+  border-radius: 26px;
+  position: relative;
+}
+
+.layer:nth-child(1) {
+  margin-inline: 0;
+}
+
+.layer:nth-child(2) {
+  margin-inline: 22px;
+}
+
+.layer:nth-child(3) {
+  margin-inline: 44px;
+}
+
+.layer:nth-child(4) {
+  margin-inline: 66px;
+}
+
+.layer.accent {
+  background: linear-gradient(180deg, #fff4ea 0%, #fffaf2 100%);
+}
+
+.conversation {
+  display: grid;
+  gap: 14px;
+}
+
+.message {
+  max-width: min(720px, 92%);
+  padding: 18px 20px;
+  border-radius: 24px;
+}
+
+.message.left {
+  justify-self: start;
+  border-top-left-radius: 8px;
+}
+
+.message.right {
+  justify-self: end;
+  border-top-right-radius: 8px;
+  background: linear-gradient(180deg, #eef7f5 0%, #fffaf2 100%);
+}
+
+.two-up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.glossary strong {
+  color: var(--ink);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tool-card {
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.tool-card ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero-card,
+  .two-up,
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .layer:nth-child(1),
+  .layer:nth-child(2),
+  .layer:nth-child(3),
+  .layer:nth-child(4) {
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 20px, 1120px);
+    padding-top: 18px;
+  }
+
+  .hero,
+  .panel,
+  .layer,
+  .message,
+  .tool-card {
+    border-radius: 20px;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+}

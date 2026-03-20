@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Visual Explainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Product teardown</p>
+        <h1>How this product actually works</h1>
+        <p class="lede">
+          Start with one real user moment. Then walk downward through the stack
+          so a non-technical reader can see who does what.
+        </p>
+        <div class="hero-card">
+          <div>
+            <p class="label">Core scene</p>
+            <h2>User pays and access unlocks</h2>
+            <p>
+              Tell the story like a chain reaction: payment confirmed, account
+              updated, features unlocked, confirmation shown.
+            </p>
+          </div>
+          <div class="chat-pill">"Stripe says: payment went through."</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">1. Big picture</p>
+          <h2>What job the product is doing</h2>
+        </div>
+        <div class="panel">
+          <p>
+            Replace this with one short, friendly explanation of the product's
+            job. Keep it human. Avoid framework names here.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">2. Layered architecture</p>
+          <h2>See the stack at a glance</h2>
+        </div>
+        <div class="layers">
+          <article class="layer">
+            <p class="label">Layer 1</p>
+            <h3>User and interface</h3>
+            <p>What the person sees, clicks, uploads, or reads.</p>
+          </article>
+          <article class="layer">
+            <p class="label">Layer 2</p>
+            <h3>Application logic</h3>
+            <p>The part that decides what should happen next.</p>
+          </article>
+          <article class="layer">
+            <p class="label">Layer 3</p>
+            <h3>Data and infrastructure</h3>
+            <p>Where memory, files, queues, and background work live.</p>
+          </article>
+          <article class="layer accent">
+            <p class="label">Layer 4</p>
+            <h3>Third-party services</h3>
+            <p>Billing, auth, AI, storage, analytics, or messaging tools.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">3. Message passing</p>
+          <h2>How services talk like teammates</h2>
+        </div>
+        <div class="conversation">
+          <article class="message left">
+            <p class="speaker">User</p>
+            <p>I just paid. Can I use the paid features now?</p>
+          </article>
+          <article class="message right">
+            <p class="speaker">Billing service</p>
+            <p>Yes. I am sending the app a payment-confirmed update now.</p>
+          </article>
+          <article class="message left">
+            <p class="speaker">App backend</p>
+            <p>Got it. I am updating the account and unlocking the plan.</p>
+          </article>
+          <article class="message right">
+            <p class="speaker">Database</p>
+            <p>Recorded. This user now has the new entitlement.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section two-up">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">4. Plain language tech</p>
+            <h2>Translate the hard words</h2>
+          </div>
+          <div class="panel glossary">
+            <p><strong>Webhook</strong>: an automated heads-up message from one service to another.</p>
+            <p><strong>Queue</strong>: a waiting line for work that should happen in the background.</p>
+            <p><strong>Object storage</strong>: a warehouse for large files such as images and video.</p>
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">5. Risks and tradeoffs</p>
+            <h2>Where this setup gets awkward</h2>
+          </div>
+          <div class="panel">
+            <p>
+              Replace with 2-4 short points on cost, complexity, reliability,
+              or vendor lock-in.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">6. SaaS toolbox</p>
+          <h2>Which outside tools keep the machine running</h2>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <p class="label">Billing</p>
+            <h3>Stripe</h3>
+            <p>Collects payments and sends status updates back to the app.</p>
+            <ul>
+              <li>Free tier: Typically no monthly fee, pay per transaction.</li>
+              <li>Paid: Add current pricing from the official page.</li>
+              <li>Upgrade trigger: Higher volume or advanced billing needs.</li>
+            </ul>
+          </article>
+          <article class="tool-card">
+            <p class="label">Database</p>
+            <h3>Supabase</h3>
+            <p>Stores structured data, auth state, and sometimes server logic.</p>
+            <ul>
+              <li>Free tier: Add current limits from the official page.</li>
+              <li>Paid: Add current pricing from the official page.</li>
+              <li>Upgrade trigger: More data, bandwidth, or team features.</li>
+            </ul>
+          </article>
+          <article class="tool-card">
+            <p class="label">Storage</p>
+            <h3>Cloud storage</h3>
+            <p>Keeps images, videos, exports, and other large files.</p>
+            <ul>
+              <li>Free tier: If any, note the quota.</li>
+              <li>Paid: Note how storage or transfer is billed.</li>
+              <li>Upgrade trigger: More uploads and more traffic.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Teardown Explainer"
+  short_description: "Analyze products via code or public sources, then explain clearly"
+  default_prompt: "Use $product-teardown-explainer to break down this product. Prefer source code if available, otherwise fall back to public materials, then explain the architecture and service flow in plain language."
